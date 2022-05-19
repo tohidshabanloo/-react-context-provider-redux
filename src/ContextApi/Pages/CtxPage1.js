@@ -2,11 +2,11 @@ import { useContext } from "react";
 import CounterContext from "../Context";
 
 const CtxPage1 = () => {
-  const { counter } = useContext(CounterContext);
+  const { state } = useContext(CounterContext);
   return (
     <>
       <h1>CtxPage1</h1>
-      <div>counter: {counter}</div>
+      <div>state: {state}</div>
     </>
   );
 };

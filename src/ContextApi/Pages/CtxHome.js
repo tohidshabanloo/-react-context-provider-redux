@@ -1,12 +1,20 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import CounterContext from "../Context";
 
 const CtxHome = () => {
-  const { counter } = useContext(CounterContext);
+  const { setState } = useContext(CounterContext);
+
+  useEffect(() => {
+    const log = () => {
+      console.log("HI");
+    };
+    setState(() => log);
+  }, [setState]);
+
   return (
     <>
       <h1>CtxHome</h1>
-      <div>counter: {counter}</div>
+      {/* <div>state: {state}</div> */}
     </>
   );
 };
